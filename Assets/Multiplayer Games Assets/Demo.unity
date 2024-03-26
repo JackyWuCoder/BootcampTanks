@@ -1520,9 +1520,11 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 385977664}
-    PlayerPrefab: {fileID: 0}
+    PlayerPrefab: {fileID: 2708175284520391657, guid: 3623119c1680c4d488b1bd3f8444184f,
+      type: 3}
     Prefabs:
-      NetworkPrefabsLists: []
+      NetworkPrefabsLists:
+      - {fileID: 11400000, guid: 906312d4127b43a4897f6c5c903feff7, type: 2}
     TickRate: 30
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
@@ -3413,7 +3415,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 161.94, y: 30.728}
+  m_AnchoredPosition: {x: 161.93994, y: 30.728027}
   m_SizeDelta: {x: 323.8786, y: 46.544}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &968350768
