@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 1809029160191444011}
   - component: {fileID: 8126677274903792511}
   - component: {fileID: 1106374703354902232}
-  - component: {fileID: -2528268336558357246}
-  - component: {fileID: 6306518923285159864}
+  - component: {fileID: 8994804490738726434}
+  - component: {fileID: 2555260813084556248}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3713239093
+  GlobalObjectIdHash: 3356357134
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -271,7 +271,7 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &-2528268336558357246
+--- !u!114 &8994804490738726434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8356697507982392753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: e7eecc474892cd441b60f44373bb8ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseUnreliableDeltas: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &6306518923285159864
+--- !u!114 &2555260813084556248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
