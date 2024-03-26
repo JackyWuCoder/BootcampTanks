@@ -21,7 +21,6 @@ public class GameNetworkManager : MonoBehaviour
         NetworkManager.Singleton.StartHost();
         joinStatusTxt.SetText(playerNameInput.text + " joined the game as a Host");
         playerNameInput.gameObject.SetActive(false);
-
     }
 
     public void JoinClient()
@@ -39,6 +38,11 @@ public class GameNetworkManager : MonoBehaviour
         joinStatusTxt.SetText(playerName.text + " joined the game as a Server");
     }
     */
+
+    public string GetPlayerNameInput() 
+    {
+        return playerNameInput.text;
+    }
 
     // Start is called before the first frame update
     private void Start()

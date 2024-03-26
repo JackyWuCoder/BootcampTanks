@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2393679345
-  InScenePlacedSourceGlobalObjectIdHash: 0
+  GlobalObjectIdHash: 2733133562
+  InScenePlacedSourceGlobalObjectIdHash: 2393679345
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -132,6 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tankSpeed: 10
   tankTurnSpeed: 10
+  playerNameTxt: {fileID: 6069422183682774076}
 --- !u!114 &-4786041884273128393
 MonoBehaviour:
   m_ObjectHideFlags: 0

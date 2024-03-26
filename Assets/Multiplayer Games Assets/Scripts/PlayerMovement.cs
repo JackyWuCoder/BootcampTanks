@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -7,7 +8,9 @@ public class PlayerMovement : NetworkBehaviour
 {
     [SerializeField] private float tankSpeed = 10.0f;
     [SerializeField] private float tankTurnSpeed = 10.0f;
+    [SerializeField] private TMP_Text playerNameTxt;
 
+    GameNetworkManager gameNetworkManager;
     private Rigidbody tankRb;
     private float horizontal;
     private float vertical;
@@ -16,6 +19,9 @@ public class PlayerMovement : NetworkBehaviour
     {
         base.OnNetworkSpawn();
         tankRb = GetComponent<Rigidbody>();
+        if (!IsOwner) return;
+        gameNetworkManager = FindObjectOfType<GameNetworkManager>();
+        playerNameTxt.SetText(gameNetworkManager.GetPlayerNameInput());
     }
 
     // Start is called before the first frame update
