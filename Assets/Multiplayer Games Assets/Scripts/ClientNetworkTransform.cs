@@ -10,6 +10,7 @@ public class ClientNetworkTransform : NetworkTransform
         return false;
     }
 
+    /*
     // Start is called before the first frame update
     private void Start()
     {
@@ -21,4 +22,6 @@ public class ClientNetworkTransform : NetworkTransform
     {
         
     }
+    */
+
 }
