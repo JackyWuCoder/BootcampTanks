@@ -19,7 +19,7 @@ public class GameNetworkManager : MonoBehaviour
 
     public void JoinClient()
     {
-        transport.ConnectionData.Address = ipAddress.text.Replace(" ", "");
+        //transport.ConnectionData.Address = ipAddress.text.Replace(" ", "");
         NetworkManager.Singleton.StartClient();
         joinStatusTxt.SetText("Joined as Client");
     }
