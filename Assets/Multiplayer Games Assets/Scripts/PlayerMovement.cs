@@ -18,11 +18,6 @@ public class PlayerMovement : NetworkBehaviour
         tankRb = GetComponent<Rigidbody>();
     }
 
-    private void Awake()
-    {
-        tankRb = GetComponent<Rigidbody>();
-    }
-
     // Start is called before the first frame update
     private void Start()
     {
