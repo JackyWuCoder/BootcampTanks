@@ -42,8 +42,8 @@ GameObject:
   - component: {fileID: 6384810401165097538}
   - component: {fileID: 4040113818050352350}
   - component: {fileID: 602091972948892409}
-  - component: {fileID: 8581947403821467999}
   - component: {fileID: 1261031592138283279}
+  - component: {fileID: 764905429176891528}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -117,7 +117,7 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &8581947403821467999
+--- !u!114 &1261031592138283279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,7 +126,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 2708175284520391657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: ff57c9e1d6abca04ca6e7cb727ec39ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankSpeed: 10
+  tankTurnSpeed: 10
+--- !u!114 &764905429176891528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708175284520391657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7eecc474892cd441b60f44373bb8ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseUnreliableDeltas: 0
@@ -148,20 +162,6 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &1261031592138283279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2708175284520391657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff57c9e1d6abca04ca6e7cb727ec39ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tankSpeed: 10
-  tankTurnSpeed: 10
 --- !u!1 &7705473852544140771
 GameObject:
   m_ObjectHideFlags: 0
