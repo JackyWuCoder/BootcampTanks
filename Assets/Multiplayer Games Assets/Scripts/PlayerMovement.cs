@@ -35,6 +35,8 @@ public class PlayerMovement : NetworkBehaviour
     // Update is called once per frame
     private void Update()
     {
+        playerNameText.transform.parent.LookAt(Camera.main.transform);
+        //playerNameText.transform.parent.LookAt(Camera.main.transform);
         if (!IsOwner) return;
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
