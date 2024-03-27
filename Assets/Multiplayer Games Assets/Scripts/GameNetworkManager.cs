@@ -11,17 +11,19 @@ public class GameNetworkManager : MonoBehaviour
     [SerializeField] private TMP_InputField ipAddress;
     [SerializeField] private UnityTransport transport;
 
+    [SerializeField] private TMP_InputField playerNameInput;
+
     public void JoinHost()
     {
         NetworkManager.Singleton.StartHost();
-        joinStatusTxt.SetText("Joined as Host");
+        joinStatusTxt.SetText(playerNameInput.text + " joined the game as a Host");
     }
 
     public void JoinClient()
     {
         //transport.ConnectionData.Address = ipAddress.text.Replace(" ","");
         NetworkManager.Singleton.StartClient();
-        joinStatusTxt.SetText("Joined as Client");
+        joinStatusTxt.SetText(playerNameInput.text + " joined the game as a Client");
     }
 
     /*
@@ -31,6 +33,11 @@ public class GameNetworkManager : MonoBehaviour
         joinStatusTxt.SetText("Joined as Server");
     }
     */
+
+    public string GetPlayerNameInput() 
+    {
+        return playerNameInput.text;
+    }
 
     /*
     // Start is called before the first frame update

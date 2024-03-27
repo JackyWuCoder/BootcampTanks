@@ -4306,6 +4306,7 @@ MonoBehaviour:
   joinStatusTxt: {fileID: 933985007}
   ipAddress: {fileID: 1667105855}
   transport: {fileID: 385977664}
+  playerNameInput: {fileID: 117489017}
 --- !u!1 &1433273438
 GameObject:
   m_ObjectHideFlags: 0
