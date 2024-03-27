@@ -8,7 +8,6 @@ public class PlayerMovement : NetworkBehaviour
 {
     [SerializeField] private float tankSpeed = 10.0f;
     [SerializeField] private float tankTurnSpeed = 10.0f;
-    [SerializeField] private TMP_Text playerNameTxt;
 
     GameNetworkManager gameNetworkManager;
     private Rigidbody tankRb;
@@ -19,16 +18,15 @@ public class PlayerMovement : NetworkBehaviour
     {
         base.OnNetworkSpawn();
         tankRb = GetComponent<Rigidbody>();
-        if (!IsOwner) return;
-        gameNetworkManager = FindObjectOfType<GameNetworkManager>();
-        playerNameTxt.SetText(gameNetworkManager.GetPlayerNameInput());
     }
 
+    /*
     // Start is called before the first frame update
     private void Start()
     {
         
     }
+    */
 
     // Update is called once per frame
     private void Update()
