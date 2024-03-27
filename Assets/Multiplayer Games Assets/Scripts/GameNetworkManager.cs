@@ -4,7 +4,6 @@ using TMPro;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameNetworkManager : MonoBehaviour
 {
@@ -15,23 +14,21 @@ public class GameNetworkManager : MonoBehaviour
     public void JoinHost() 
     {
         NetworkManager.Singleton.StartHost();
-        joinStatusTxt.SetText(" joined the game as a Host");
+        joinStatusTxt.SetText("Joined as Host");
     }
 
     public void JoinClient()
     {
         //transport.ConnectionData.Address = ipAddress.text.Replace(" ", "");
         NetworkManager.Singleton.StartClient();
-        joinStatusTxt.SetText(" joined the game as a Client");
+        joinStatusTxt.SetText("Joined as Client");
     }
 
-    /*
     public void JoinServer()
     {
         NetworkManager.Singleton.StartServer();
-        joinStatusTxt.SetText(playerName.text + " joined the game as a Server");
+        joinStatusTxt.SetText("Joined as Server");
     }
-    */
 
     /*
     // Start is called before the first frame update

@@ -4283,7 +4283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joinStatusTxt: {fileID: 933985007}
   ipAddress: {fileID: 1667105855}
-  transport: {fileID: 0}
+  transport: {fileID: 385977664}
 --- !u!1 &1433273438
 GameObject:
   m_ObjectHideFlags: 0
