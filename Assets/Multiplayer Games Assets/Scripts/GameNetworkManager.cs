@@ -26,13 +26,11 @@ public class GameNetworkManager : MonoBehaviour
         joinStatusTxt.SetText(playerNameInput.text + " joined the game as a Client");
     }
 
-    /*
     public void JoinServer()
     {
         NetworkManager.Singleton.StartServer();
         joinStatusTxt.SetText("Joined as Server");
     }
-    */
 
     public string GetPlayerNameInput() 
     {
