@@ -31,14 +31,18 @@ public class BasicChat : NetworkBehaviour
     public void ChatServerRPC(string message)
     {
         //chatText.text = "A client says hi";
-        chatText.text = message;
+        if (!IsHost)
+        {
+            chatText.text += "\n" + message;
+        }
+        ChatClientRPC(message);
     }
 
     [ClientRpc]
     public void ChatClientRPC(string message)
     {
         //chatText.text = "Server says hi";
-        chatText.text = message;
+        chatText.text += "\n" + message;
     }
 
     /*
