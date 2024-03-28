@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &17049428
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3949,7 +3949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1085407742
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4218,7 +4218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1220279049
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4283,8 +4283,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BasicChat, Assembly-CSharp
+      - m_Target: {fileID: 2063775751}
+        m_TargetAssemblyTypeName: SimpleChat, Assembly-CSharp
         m_MethodName: SendChat
         m_Mode: 1
         m_Arguments:
@@ -6517,13 +6517,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2063775750}
   - component: {fileID: 2063775748}
+  - component: {fileID: 2063775751}
   m_Layer: 0
   m_Name: SimpleChat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2063775748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6560,6 +6561,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2063775751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063775747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c35cb1984b67ff74e8fa62adfcf88a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chatInput: {fileID: 17049429}
+  chatText: {fileID: 1085407743}
 --- !u!1 &2068286171
 GameObject:
   m_ObjectHideFlags: 0
