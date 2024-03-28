@@ -30,13 +30,15 @@ public class BasicChat : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void ChatServerRPC(string message)
     {
-        chatText.text = "A client says hi";
+        //chatText.text = "A client says hi";
+        chatText.text = message;
     }
 
     [ClientRpc]
     public void ChatClientRPC(string message)
     {
-        chatText.text = "Server says hi";
+        //chatText.text = "Server says hi";
+        chatText.text = message;
     }
 
     /*
