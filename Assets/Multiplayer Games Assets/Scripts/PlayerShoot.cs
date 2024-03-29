@@ -37,6 +37,7 @@ public class PlayerShoot : NetworkBehaviour
     public void Shoot() {
         GameObject bulletObject = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
         bulletObject.GetComponent<NetworkObject>().Spawn();
+        bulletObject.GetComponent<Bullet>().clientID = NetworkManager.Singleton.LocalClientId;
         bulletObject.GetComponent<Rigidbody>().AddForce(tankRb.velocity + (bulletObject.transform.forward * shootSpeed), ForceMode.VelocityChange);
         Destroy(bulletObject, 5);
     }
