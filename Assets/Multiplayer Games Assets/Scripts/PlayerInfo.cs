@@ -19,6 +19,13 @@ public class PlayerInfo : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         playerName.OnValueChanged += OnNameChanged;
+        playerNameTxt.SetText(playerName.Value.ToString());
+        gameObject.name = "Player_" + playerName.Value.ToString();
+        if (IsLocalPlayer)
+        {
+            GameManager.Instance.SetLocalPlayer(NetworkObject);
+        }
+        GameManager.Instance.OnPlayerJoined(NetworkObject);
     }
 
     private void OnNameChanged(FixedString64Bytes preVal, FixedString64Bytes newVal)
