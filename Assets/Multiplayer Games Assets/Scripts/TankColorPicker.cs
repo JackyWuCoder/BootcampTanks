@@ -47,28 +47,13 @@ public class TankColorPicker : NetworkBehaviour
     private void OnChangeColorButtonClicked()
     {
         // Check if the client clicking the button is the local player
-        if (IsOwner)
+        if (IsOwner && IsOwner)
         {
             ChangeColor();
         }
         else
         {
             Debug.LogWarning("Only the local player can change the color.");
-        }
-    }
-
-    private void Start()
-    {
-        // Initialize the tank color
-        if (IsLocalPlayer)
-        {
-            ChangeColor(); // Call local method to change color
-        }
-
-        // Add listener to the button click event
-        if (changeColorButton != null)
-        {
-            changeColorButton.onClick.AddListener(OnButtonClicked);
         }
     }
 
