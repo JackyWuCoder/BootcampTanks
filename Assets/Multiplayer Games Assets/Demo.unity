@@ -947,7 +947,7 @@ GameObject:
   - component: {fileID: 212442915}
   m_Layer: 5
   m_Name: Color Dropdown
-  m_TagString: Untagged
+  m_TagString: TankColorDropdown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1034,8 +1034,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -5547415342767081361, guid: 3623119c1680c4d488b1bd3f8444184f,
-          type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TankColorChange, Assembly-CSharp
         m_MethodName: ChangeColor
         m_Mode: 1
@@ -5489,20 +5488,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1246977548}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -5547415342767081361, guid: 3623119c1680c4d488b1bd3f8444184f,
-          type: 3}
-        m_TargetAssemblyTypeName: TankColorChange, Assembly-CSharp
-        m_MethodName: ChangeColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1246977548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5647,88 +5633,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1543806788}
   m_LocalEulerAnglesHint: {x: 0, y: 71.721, z: 0}
---- !u!1001 &1295711954
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -5547415342767081361, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      propertyPath: colorDropdown
-      value: 
-      objectReference: {fileID: 212442915}
-    - target: {fileID: 602091972948892409, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      propertyPath: GlobalObjectIdHash
-      value: 2654656222
-      objectReference: {fileID: 0}
-    - target: {fileID: 2708175284520391657, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      propertyPath: m_Name
-      value: Tank
-      objectReference: {fileID: 0}
-    - target: {fileID: 6384810401165097538, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6384810401165097538, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6384810401165097538, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6384810401165097538, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6384810401165097538, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6384810401165097538, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6384810401165097538, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6384810401165097538, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6384810401165097538, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6384810401165097538, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7861113544383192217, guid: 3623119c1680c4d488b1bd3f8444184f,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-  m_SourcePrefab: {fileID: 100100000, guid: 3623119c1680c4d488b1bd3f8444184f, type: 3}
 --- !u!1 &1315362465
 GameObject:
   m_ObjectHideFlags: 0
@@ -9888,4 +9792,3 @@ SceneRoots:
   - {fileID: 2063775750}
   - {fileID: 1539522501}
   - {fileID: 1343437123}
-  - {fileID: 1295711954}

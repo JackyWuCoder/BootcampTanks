@@ -11,6 +11,7 @@ public class TankColorPicker : NetworkBehaviour
     public NetworkVariable<Color> tankColor = new NetworkVariable<Color>();
 
     public string dropdownTag = "TankColorDropdown"; // tag of dropdown
+    public Button changeColorButton;
 
     public override void OnNetworkSpawn()
     {
@@ -29,6 +30,12 @@ public class TankColorPicker : NetworkBehaviour
             {
                 Debug.LogError("TMP_Dropdown component not found on object with tag: " + dropdownTag);
             }
+            // Find the ColorSubmit button game object
+            Transform changeColorButtonTransform = dropdownObject.transform.Find("ColorSubmitButton");
+            if (changeColorButtonTransform != null)
+            {
+                changeColorButton = changeColorButtonTransform.gameObject.GetComponent<Button>();
+            }
         }
         else
         {
@@ -43,6 +50,18 @@ public class TankColorPicker : NetworkBehaviour
         {
             ChangeColor(); // Call local method to change color
         }
+
+        // Add listener to the button click event
+        if (changeColorButton != null)
+        {
+            changeColorButton.onClick.AddListener(OnButtonClicked);
+        }
+    }
+
+    private void OnButtonClicked()
+    {
+        // Change color of the tank when the button is clicked
+        ChangeColor();
     }
 
     public void ChangeColor()
