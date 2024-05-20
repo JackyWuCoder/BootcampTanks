@@ -21,7 +21,7 @@ public class TankColorPicker : NetworkBehaviour
         if (dropdownObject != null)
         {
             TMP_Dropdown tempColorDropdown = dropdownObject.GetComponent<TMP_Dropdown>();
-            if (colorDropdown != null)
+            if (tempColorDropdown != null)
             {
                 colorDropdown = tempColorDropdown;
             }
