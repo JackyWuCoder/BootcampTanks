@@ -47,7 +47,7 @@ public class TankColorPicker : NetworkBehaviour
     private void OnChangeColorButtonClicked()
     {
         // Check if the client clicking the button is the local player
-        if (IsLocalPlayer)
+        if (IsOwner)
         {
             ChangeColor();
         }
