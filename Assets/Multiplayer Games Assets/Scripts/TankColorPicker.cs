@@ -42,5 +42,14 @@ public class TankColorPicker : NetworkBehaviour
     {
         // Update the tank color on all clients
         tankColor.Value = newColor;
+
+        // Update the tank's visual appearance
+        UpdateTankColorVisual(newColor);
+    }
+
+    private void UpdateTankColorVisual(Color newColor)
+    {
+        // Update the material color of the tank's renderer
+        tankRenderer.material.color = newColor;
     }
 }

@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 1098846826478316699}
   - component: {fileID: 4921843397021288586}
   - component: {fileID: 8858140597153513090}
+  - component: {fileID: 1500277933052451957}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -110,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2393679345
+  GlobalObjectIdHash: 2733133562
   InScenePlacedSourceGlobalObjectIdHash: 2393679345
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -192,6 +193,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a831a0744c9a364fa9ab8fd9b74f871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1500277933052451957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708175284520391657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67cae0f7a0235f84a90897c284abec59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorDropdown: {fileID: 0}
+  tankRenderer: {fileID: 0}
+  tankColor:
+    m_InternalValue: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7705473852544140771
 GameObject:
   m_ObjectHideFlags: 0
