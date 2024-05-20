@@ -9,8 +9,6 @@ public class TankColorPicker : NetworkBehaviour
     public Renderer tankRenderer;
     public Button changeColorButton;
 
-    // public NetworkVariable<Color> tankColor = new NetworkVariable<Color>();
-
     public string dropdownTag = "TankColorDropdown"; // tag of dropdown
 
     public override void OnNetworkSpawn()
@@ -46,7 +44,7 @@ public class TankColorPicker : NetworkBehaviour
 
     private void OnChangeColorButtonClicked()
     {
-        // Check if the client clicking the button is the local player
+        // Check if the client clicking the button is the local player and owner
         if (IsOwner && IsOwner)
         {
             ChangeColor();
