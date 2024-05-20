@@ -17,7 +17,7 @@ public class TankColorPicker : NetworkBehaviour
         base.OnNetworkSpawn();
 
         // Find TMP_Dropdown component by tag
-        GameObject dropdownObject = GameObject.FindGameObjectWithTag(dropdownTag);
+        GameObject dropdownObject = GameObject.FindWithTag(dropdownTag);
         if (dropdownObject != null)
         {
             TMP_Dropdown tempColorDropdown = dropdownObject.GetComponent<TMP_Dropdown>();
