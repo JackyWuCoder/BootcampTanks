@@ -50,6 +50,8 @@ public class TankColorPicker : NetworkBehaviour
         if (IsLocalPlayer)
         {
             ChangeColor();
+            // Synchronize color change across the network
+            ChangeColorClientRpc(GetSelectedColor()); // 
         }
         else
         {
@@ -85,17 +87,20 @@ public class TankColorPicker : NetworkBehaviour
 
         // Update the material color of the tank's renderer
         tankRenderer.material.color = selectedColor;
-
-        // Synchronize the color change across the network
-        ChangeColorClientRpc(selectedColor);
     }
 
+    [ServerRpc(RequireOwnership = false)]
+    private void ChangeColorServerRpc(Color newColor)
+    {
+        // Update the material color of the tank's renderer
+        tankRenderer.material.color = newColor;
+
+        ChangeColorClientRpc(newColor);
+    }
 
     [ClientRpc]
     private void ChangeColorClientRpc(Color newColor)
     {
-        // Change the color of the tank locally
-        Color selectedColor = GetSelectedColor();
 
         // Update the material color of the tank's renderer
         tankRenderer.material.color = newColor;
