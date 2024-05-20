@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorDropdown: {fileID: 0}
-  tankRenderer: {fileID: 0}
+  tankRenderer: {fileID: 3730083614513015225}
   tankColor:
     m_InternalValue: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7705473852544140771
@@ -547,3 +547,9 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.029365227, y: 0.044599924, z: 0.026628174}
   m_Center: {x: 0, y: -0.0047454415, z: 0.0073344754}
+--- !u!23 &3730083614513015225 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 5f6bca0ad11cc49d7b994095c6dbec11,
+    type: 3}
+  m_PrefabInstance: {fileID: 2594775874698949949}
+  m_PrefabAsset: {fileID: 0}

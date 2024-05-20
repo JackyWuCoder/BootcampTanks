@@ -10,6 +10,32 @@ public class TankColorPicker : NetworkBehaviour
 
     public NetworkVariable<Color> tankColor = new NetworkVariable<Color>();
 
+    public string dropdownTag = "TankColorDropdown"; // tag of dropdown
+
+    public override void OnNetworkSpawn()
+    {
+        base.OnNetworkSpawn();
+
+        // Find TMP_Dropdown component by tag
+        GameObject dropdownObject = GameObject.FindGameObjectWithTag(dropdownTag);
+        if (dropdownObject != null)
+        {
+            TMP_Dropdown tempColorDropdown = dropdownObject.GetComponent<TMP_Dropdown>();
+            if (colorDropdown != null)
+            {
+                colorDropdown = tempColorDropdown;
+            }
+            else
+            {
+                Debug.LogError("TMP_Dropdown component not found on object with tag: " + dropdownTag);
+            }
+        }
+        else
+        {
+            Debug.LogError("Object with tag: " + dropdownTag + " not found in the scene.");
+        }
+    }
+
     private void Start()
     {
         // Initialize the tank color
