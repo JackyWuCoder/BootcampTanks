@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class TankColorChange : NetworkBehaviour
 {
-    [SerializeField] private TMP_Dropdown colorDropdown;
+    private GameObject colorDropDownGO;
+    private TMP_Dropdown colorDropdown;
 
     // Network variable to synchronize color
     // [SyncVar(hook = nameof(OnColorChanged))]
@@ -16,6 +17,24 @@ public class TankColorChange : NetworkBehaviour
 
     private void Start()
     {
+        // Find the child GameObject by name among the children of the Canvas
+        Transform canvasTransform = GameObject.Find("Canvas").transform; // Replace "Canvas" with the name of your Canvas GameObject
+        if (canvasTransform != null)
+        {
+            colorDropDownGO = canvasTransform.Find("Color Dropdown").gameObject; // Replace "ChildObjectName" with the name of the child GameObject you want to find
+            if (colorDropDownGO != null)
+            {
+                Debug.Log("Found child GameObject: " + colorDropDownGO.name);
+            }
+            else
+            {
+                Debug.LogError("Child GameObject not found!");
+            }
+        }
+        else
+        {
+            Debug.LogError("Canvas GameObject not found!");
+        }
         tankRenderer = GetComponent<Renderer>();
     }
 
