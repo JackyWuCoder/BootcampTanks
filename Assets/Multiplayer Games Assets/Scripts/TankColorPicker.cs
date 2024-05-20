@@ -7,11 +7,11 @@ public class TankColorPicker : NetworkBehaviour
 {
     public TMP_Dropdown colorDropdown;
     public Renderer tankRenderer;
+    public Button changeColorButton;
 
-    public NetworkVariable<Color> tankColor = new NetworkVariable<Color>();
+    // public NetworkVariable<Color> tankColor = new NetworkVariable<Color>();
 
     public string dropdownTag = "TankColorDropdown"; // tag of dropdown
-    public Button changeColorButton;
 
     public override void OnNetworkSpawn()
     {
@@ -74,7 +74,7 @@ public class TankColorPicker : NetworkBehaviour
 
     private void OnButtonClicked()
     {
-        // Change color of the tank when the button is clicked
+        // Change color of the tank when the button is clicked locally
         ChangeColor();
     }
 
@@ -82,10 +82,23 @@ public class TankColorPicker : NetworkBehaviour
     {
         // Change the color of the tank locally
         Color selectedColor = GetSelectedColor();
-        tankColor.Value = selectedColor;
+
+        // Update the material color of the tank's renderer
+        tankRenderer.material.color = selectedColor;
 
         // Synchronize the color change across the network
-        RpcChangeColorClientRpc(selectedColor);
+        ChangeColorClientRpc(selectedColor);
+    }
+
+
+    [ClientRpc]
+    private void ChangeColorClientRpc(Color newColor)
+    {
+        // Change the color of the tank locally
+        Color selectedColor = GetSelectedColor();
+
+        // Update the material color of the tank's renderer
+        tankRenderer.material.color = newColor;
     }
 
     private Color GetSelectedColor()
@@ -94,21 +107,5 @@ public class TankColorPicker : NetworkBehaviour
         string colorHex = colorDropdown.options[colorDropdown.value].text;
         ColorUtility.TryParseHtmlString(colorHex, out Color selectedColor);
         return selectedColor;
-    }
-
-    [ClientRpc]
-    private void RpcChangeColorClientRpc(Color newColor)
-    {
-        // Update the tank color on all clients
-        tankColor.Value = newColor;
-
-        // Update the tank's visual appearance
-        UpdateTankColorVisual(newColor);
-    }
-
-    private void UpdateTankColorVisual(Color newColor)
-    {
-        // Update the material color of the tank's renderer
-        tankRenderer.material.color = newColor;
     }
 }
