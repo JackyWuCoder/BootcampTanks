@@ -35,11 +35,25 @@ public class TankColorPicker : NetworkBehaviour
             if (changeColorButtonTransform != null)
             {
                 changeColorButton = changeColorButtonTransform.gameObject.GetComponent<Button>();
+                changeColorButton.onClick.AddListener(OnChangeColorButtonClicked); // Add listener for client button click
             }
         }
         else
         {
             Debug.LogError("Object with tag: " + dropdownTag + " not found in the scene.");
+        }
+    }
+
+    private void OnChangeColorButtonClicked()
+    {
+        // Check if the client clicking the button is the local player
+        if (IsLocalPlayer)
+        {
+            ChangeColor();
+        }
+        else
+        {
+            Debug.LogWarning("Only the local player can change the color.");
         }
     }
 
